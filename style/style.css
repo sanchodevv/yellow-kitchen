@@ -161,26 +161,26 @@ header {
   .close-btn {
     margin-right: 40px;
   }
-    .phone h3{
+  .phone h3 {
     font-size: 12px;
   }
-  .phone img{
+  .phone img {
     width: 10px;
     height: 10px;
   }
-  .phone p{
+  .phone p {
     font-size: 8px;
   }
-  .nav-links{
+  .nav-links {
     gap: 10px;
   }
   .nav-links li {
     padding-top: 10px;
   }
-  .nav-links li a{
+  .nav-links li a {
     font-size: 10px;
   }
-  .lang{
+  .lang {
     font-size: 10px;
   }
 }
@@ -666,11 +666,8 @@ footer {
   color: #fff;
 }
 
-/* ===================== RESPONSIVE ===================== */
-
-/* 1200px */
+/* umumiy responsive */
 @media (max-width: 1200px) {
-  /* intro */
   .intro-info h1 {
     font-size: 42px;
     line-height: 50px;
@@ -683,8 +680,6 @@ footer {
     height: auto;
     margin-right: 20px;
   }
-
-  /* short-banner */
   .intro-qua {
     width: 100%;
     height: auto;
@@ -692,12 +687,10 @@ footer {
     flex-wrap: wrap;
   }
 
-  /* restaurants */
   .restaurants-header h1 {
     font-size: 28px;
   }
 
-  /* cons */
   .cons {
     padding: 60px 80px;
   }
@@ -710,12 +703,10 @@ footer {
     height: 60px;
   }
 
-  /* spec */
   .spec-header h1 {
     font-size: 28px;
   }
 
-  /* stat */
   .stat {
     gap: 20px;
     height: auto;
@@ -738,13 +729,11 @@ footer {
     bottom: 30px;
   }
 
-  /* map */
   .map figure iframe {
     width: 960px;
     height: 480px;
   }
 
-  /* insta */
   .insta-title h1 {
     font-size: 28px;
     line-height: 40px;
@@ -753,7 +742,6 @@ footer {
     max-width: 240px;
   }
 
-  /* footer */
   footer {
     padding: 40px 60px;
   }
@@ -768,20 +756,21 @@ footer {
   }
 }
 
-/* 992px */
 @media (max-width: 992px) {
-  /* intro */
   .intro {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 32px;
   }
   .intro-info h1 {
     font-size: 34px;
+    text-align: center;
     line-height: 42px;
   }
   .intro-btns {
     margin-block: 32px 32px;
+    justify-content: center;
   }
   .intro-img img {
     width: 100%;
@@ -789,7 +778,6 @@ footer {
     margin-right: 0;
   }
 
-  /* short-banner */
   .short-banner {
     display: flex;
     justify-content: center;
@@ -806,7 +794,6 @@ footer {
     max-width: 140px;
   }
 
-  /* cons */
   .cons {
     flex-direction: column;
     align-items: flex-start;
@@ -829,14 +816,11 @@ footer {
     width: 100%;
     padding: 16px 24px;
   }
-
-  /* map */
   .map figure iframe {
     width: 720px;
     height: 400px;
   }
 
-  /* insta */
   .insta-imgs {
     flex-wrap: wrap;
     gap: 12px;
@@ -846,7 +830,6 @@ footer {
     width: 48%;
   }
 
-  /* footer */
   .footer-head {
     flex-direction: column;
     align-items: flex-start;
@@ -863,9 +846,7 @@ footer {
   }
 }
 
-/* 768px */
 @media (max-width: 768px) {
-  /* intro */
   .intro-info h1 {
     font-size: 28px;
     line-height: 36px;
@@ -880,7 +861,6 @@ footer {
     font-size: 13px;
   }
 
-  /* short-banner */
   .intro-qua {
     flex-direction: column;
     width: 100%;
@@ -895,7 +875,6 @@ footer {
     height: 36px;
   }
 
-  /* restaurants */
   .restaurants-header {
     flex-direction: column;
     align-items: flex-start;
@@ -907,12 +886,10 @@ footer {
     line-height: 32px;
   }
 
-  /* swiper card */
   .swiper-card {
     width: 100%;
   }
 
-  /* cons */
   .cons {
     padding: 40px 24px;
   }
@@ -925,7 +902,6 @@ footer {
     max-width: 100%;
   }
 
-  /* spec */
   .spec-header {
     flex-direction: column;
     align-items: flex-start;
@@ -941,7 +917,6 @@ footer {
     height: 110px;
   }
 
-  /* stat */
   .stat {
     flex-wrap: wrap;
     height: auto;
@@ -965,7 +940,6 @@ footer {
     margin-left: 18px;
   }
 
-  /* map */
   .map {
     margin-block: 40px;
   }
@@ -974,7 +948,6 @@ footer {
     height: 320px;
   }
 
-  /* insta */
   .insta-title h1 {
     font-size: 22px;
     line-height: 30px;
@@ -984,7 +957,6 @@ footer {
     width: 48%;
   }
 
-  /* footer */
   footer {
     padding: 32px 24px;
   }
@@ -1002,9 +974,7 @@ footer {
   }
 }
 
-/* 576px */
 @media (max-width: 576px) {
-  /* intro */
   .intro-info h1 {
     font-size: 22px;
     line-height: 30px;
@@ -1019,7 +989,6 @@ footer {
     height: auto;
   }
 
-  /* short-banner */
   .short-banner {
     padding-inline: 16px;
   }
@@ -1028,13 +997,11 @@ footer {
     padding: 12px;
   }
 
-  /* restaurants */
   .restaurants {
     margin-top: 24px;
     margin-bottom: 40px;
   }
 
-  /* cons */
   .cons {
     padding: 32px 16px;
   }
@@ -1043,7 +1010,6 @@ footer {
     line-height: 26px;
   }
 
-  /* spec */
   .spec {
     margin-top: 24px;
     margin-bottom: 40px;
@@ -1053,7 +1019,6 @@ footer {
     height: 90px;
   }
 
-  /* stat */
   .stat {
     gap: 16px;
     padding: 32px 8px;
@@ -1075,13 +1040,11 @@ footer {
     margin-left: 12px;
   }
 
-  /* map */
   .map figure iframe {
     width: 100%;
     height: 260px;
   }
 
-  /* insta */
   .insta-imgs {
     flex-direction: column;
     align-items: center;
@@ -1092,7 +1055,6 @@ footer {
     width: 100%;
   }
 
-  /* footer */
   .footer-head {
     gap: 24px;
   }
@@ -1120,9 +1082,7 @@ footer {
   }
 }
 
-/* 480px */
 @media (max-width: 480px) {
-  /* intro */
   .intro-info h1 {
     font-size: 18px;
     line-height: 24px;
@@ -1136,13 +1096,11 @@ footer {
     height: 50px;
   }
 
-  /* cons */
   .cons-info h1 {
     font-size: 16px;
     line-height: 22px;
   }
 
-  /* stat */
   .stat {
     gap: 12px;
   }
@@ -1163,7 +1121,6 @@ footer {
     margin-left: 8px;
   }
 
-  /* footer */
   footer {
     padding: 24px 12px;
   }
