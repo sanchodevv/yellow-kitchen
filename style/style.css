@@ -637,7 +637,8 @@ footer {
   background-color: #d4d7e5;
 }
 .soc img {
-  width: 78px;
+  width: 108px;
+  height: 30px;
 }
 .footer-bott {
   display: flex;
@@ -1120,7 +1121,10 @@ footer {
     bottom: 18px;
     margin-left: 8px;
   }
-
+  .insta-title {
+    display: flex;
+    flex-direction: column;
+  }
   footer {
     padding: 24px 12px;
   }
