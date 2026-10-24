@@ -7,6 +7,10 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -29,10 +33,15 @@ button {
 /* header */
 header {
   display: flex;
-  margin-block: 24px;
-  padding: 11px;
+  padding-block: 24px;
+  position: sticky;
+  /* margin-inline: 91px; */
+  gap: 700px;
+  /* padding: 21px; */
+  background-color: #fff;
+  z-index: 1001;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-bottom: 1px solid #d4d7e5;
 }
 .header-bar {
@@ -66,9 +75,27 @@ header {
   margin-block: 2px;
   gap: 9px;
 }
+.open {
+  position: relative;
+  padding-block: 10px;
+}
+
+.open span:nth-child(1) {
+  position: absolute;
+  transform: rotate(45deg);
+  /* margin-top: 20px; */
+}
+.open span:nth-child(2) {
+  visibility: hidden;
+  opacity: 0;
+}
+.open span:nth-child(3) {
+  position: absolute;
+  transform: rotate(-45deg);
+}
 .menu {
   position: fixed;
-  top: 0;
+  top: -10px;
   left: 0;
   width: 80%;
   height: 100%;
@@ -85,27 +112,11 @@ header {
   opacity: 1;
   visibility: visible;
 }
-.close-btn {
-  position: absolute;
-  top: 35px;
-  right: -195px;
-  width: 45px;
-  z-index: 67;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: none;
-  font-size: 20px;
-  color: #6c6c80;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+
 .sidebar {
   width: 100%;
   height: 100%;
+  position: fixed;
   background-color: #ffffff;
   padding: 80px 30px 30px 30px;
   transform: translateX(100%);
@@ -150,7 +161,9 @@ header {
   color: #9093a6;
   display: flex;
   align-items: center;
-  justify-content: end;
+  position: fixed;
+  top: 500px;
+  left: 200px;
 }
 
 /* header responsive */
@@ -159,7 +172,10 @@ header {
     margin-right: 80px;
   }
   .close-btn {
-    margin-right: 40px;
+    margin-right: 10px;
+  }
+  .lang {
+    left: 0;
   }
   .phone h3 {
     font-size: 12px;
@@ -183,6 +199,17 @@ header {
   .lang {
     font-size: 10px;
   }
+  header {
+    gap: 300px;
+  }
+}
+@media (max-width: 800px) {
+  .close-btn {
+    margin-right: 35px;
+  }
+  header {
+    gap: 150px;
+  }
 }
 @media (max-width: 768px) {
   .close-btn {
@@ -190,6 +217,9 @@ header {
   }
   .sidebar {
     margin-right: 130px;
+  }
+  .lang {
+    left: 0;
   }
   .phone h3 {
     font-size: 17px;
@@ -200,6 +230,9 @@ header {
   }
   .phone p {
     font-size: 8px;
+  }
+  header {
+    gap: 130px;
   }
   .nav-links {
     gap: 10px;
@@ -215,11 +248,22 @@ header {
   }
 }
 @media (max-width: 576px) {
+  header {
+    gap: 180px;
+    padding: 10px;
+  }
   .close-btn {
     margin-right: 140px;
   }
+  .burger span {
+    width: 18px;
+    /* padding: 10px; */
+  }
   .cart {
     display: none;
+  }
+  .lang {
+    left: 0;
   }
   .header-logo img {
     width: 100px;
@@ -260,6 +304,11 @@ header {
   }
   .lang {
     font-size: 10px;
+  }
+}
+@media (max-width: 450px) {
+  header {
+    gap: 100px;
   }
 }
 .intro {
@@ -691,7 +740,9 @@ footer {
   .restaurants-header h1 {
     font-size: 28px;
   }
-
+  /* .lang{
+    margin-right: 500px;
+  } */
   .cons {
     padding: 60px 80px;
   }
@@ -701,7 +752,7 @@ footer {
   }
   .form-input {
     width: 260px;
-    height: 60px;
+    /* height: 60px; */
   }
 
   .spec-header h1 {
@@ -765,7 +816,9 @@ footer {
     gap: 32px;
   }
   .intro-info h1 {
-    font-size: 34px;
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 30px;
     text-align: center;
     line-height: 42px;
   }
@@ -774,7 +827,7 @@ footer {
     justify-content: center;
   }
   .intro-img img {
-    width: 100%;
+    width: 80%;
     height: auto;
     margin-right: 0;
   }
@@ -796,7 +849,7 @@ footer {
   }
 
   .cons {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
     gap: 32px;
     padding: 48px 40px;
@@ -845,11 +898,14 @@ footer {
     gap: 20px;
     margin-top: 48px;
   }
+  /* .lang{
+    margin-right: 450px;
+  } */
 }
 
 @media (max-width: 768px) {
   .intro-info h1 {
-    font-size: 28px;
+    font-size: 45px;
     line-height: 36px;
   }
   .intro-btns {
@@ -877,7 +933,7 @@ footer {
   }
 
   .restaurants-header {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
     gap: 12px;
     margin-bottom: 24px;
@@ -893,18 +949,22 @@ footer {
 
   .cons {
     padding: 40px 24px;
+    flex-direction: column;
+    align-items: center;
   }
   .cons-info h1 {
     font-size: 22px;
+    text-align: center;
     line-height: 30px;
   }
   .cons-info p {
     font-size: 13px;
+    text-align: center;
     max-width: 100%;
   }
 
   .spec-header {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
     gap: 12px;
     margin-bottom: 24px;
@@ -973,11 +1033,17 @@ footer {
   .bott-texts {
     gap: 12px;
   }
+  .soc img {
+    object-fit: contain;
+  }
+  /* .lang{
+    margin-right: 150px;
+  } */
 }
 
 @media (max-width: 576px) {
   .intro-info h1 {
-    font-size: 22px;
+    font-size: 42px;
     line-height: 30px;
   }
   .intro-btns button {
@@ -989,7 +1055,9 @@ footer {
     width: 100%;
     height: auto;
   }
-
+  /* .lang{
+    margin-right: 80px;
+  } */
   .short-banner {
     padding-inline: 16px;
   }
@@ -1005,21 +1073,39 @@ footer {
 
   .cons {
     padding: 32px 16px;
+    align-items: center;
   }
   .cons-info h1 {
     font-size: 18px;
+    text-align: center;
     line-height: 26px;
+  }
+  .cons-info p {
+    text-align: center;
   }
 
   .spec {
     margin-top: 24px;
     margin-bottom: 40px;
   }
-  .spec-swiper-card {
-    width: 90px;
-    height: 90px;
+  .swiper-slide {
+    gap: 10px;
   }
-
+  .spec-swiper-card {
+    width: 80px;
+    height: 80px;
+  }
+  .spec-header button {
+    width: 88px;
+    font-size: 13px;
+  }
+  .restaurants-header {
+    align-items: center;
+  }
+  .restaurants-header button {
+    width: 88px;
+    font-size: 13px;
+  }
   .stat {
     gap: 16px;
     padding: 32px 8px;
@@ -1096,7 +1182,12 @@ footer {
     width: 100%;
     height: 50px;
   }
-
+  .burger {
+    padding: 10px;
+  }
+  .burger span {
+    width: 18px;
+  }
   .cons-info h1 {
     font-size: 16px;
     line-height: 22px;
@@ -1116,6 +1207,8 @@ footer {
     font-size: 20px;
     bottom: 24px;
   }
+  .restaurants-header {
+  }
   .stat-card p {
     font-size: 9px;
     bottom: 18px;
@@ -1125,12 +1218,18 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .lang {
+    left: 0;
+  }
   footer {
     padding: 24px 12px;
   }
   .two-hed {
     gap: 16px;
   }
+  /* .lang{
+    margin-right: 30px;
+  } */
   .soc img {
     width: 60px;
   }
