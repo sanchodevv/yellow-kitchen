@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+// window.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("burger");
   const menu = document.getElementById("menu");
 
@@ -13,4 +13,4 @@ window.addEventListener("DOMContentLoaded", () => {
       menu.classList.remove("active");
     }
   });
-});
+// });
